@@ -4,22 +4,30 @@
       <Sider />
     </el-aside>
     <el-container>
-      <el-header class="header-style">Header</el-header>
+      <el-header class="header-style">
+        <Header />
+      </el-header>
       <el-main class="main-style">
         Main
         <router-view></router-view>
       </el-main>
       <el-footer class="footer-style">Footer</el-footer>
     </el-container>
+    <Login />
   </el-container>
 </template>
 
 <script>
 import Sider from "./Sider";
+import Header from "./Header";
+import Login from "./Login";
+
 export default {
   name: "Layout",
   components: {
     Sider,
+    Header,
+    Login,
   },
 };
 </script>
@@ -27,14 +35,6 @@ export default {
 <style scoped>
 .layout-container {
   height: 100vh;
-}
-
-.aside-style {
-  /* background-color: #ff69b4; */
-}
-
-.header-style {
-  background-color: aqua;
 }
 
 .main-style {
