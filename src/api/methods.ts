@@ -1,4 +1,4 @@
-import axios, { AxiosError, AxiosRequestConfig } from "axios";
+import axios, { AxiosError, AxiosRequestConfig, AxiosResponse } from "axios";
 import { URL_PREFIX } from "./constants";
 
 axios.defaults.baseURL = URL_PREFIX;
@@ -9,10 +9,12 @@ type GetConfig<Data> = Omit<
   "method" | "baseURL" | "url"
 >;
 
+export const _genSuffix = (): number => Date.now();
+
 export const _get = <Data>(
   url: string,
   config?: GetConfig<Data>
-): Promise<any> => {
+): Promise<AxiosResponse> => {
   return axios({
     url,
     method: "GET",
