@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/explicit-module-boundary-types */
 <template>
   <el-dialog title="登陆" :visible.sync="showLoginModal">
     <el-form :model="form">
@@ -16,7 +15,7 @@
   </el-dialog>
 </template>
 
-<script lang="ts">
+<script>
 import { mapActions } from "vuex";
 import { login } from "@/api/login";
 
