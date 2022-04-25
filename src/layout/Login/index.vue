@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/explicit-module-boundary-types */
 <template>
   <el-dialog title="登陆" :visible.sync="showLoginModal">
     <el-form :model="form">

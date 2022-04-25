@@ -10,7 +10,7 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
 import { mapActions } from "vuex";
 import { getLoginStatus, logout } from "@/api/login";
 import Cookies from "js-cookie";
@@ -37,7 +37,7 @@ export default {
       console.log(c);
     },
     setCookie() {
-      let a = Cookies.set("test", 1, { domain: ".baidu.com" });
+      let a = Cookies.set("test", "1", { domain: ".baidu.com" });
       console.log(a);
     },
     removeCookie() {
